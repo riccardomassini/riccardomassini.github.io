@@ -23,7 +23,6 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/* Colore generale dei link - non dovrebbe più influenzare i bottoni di navigazione */
 a {
     color: #007bff;
     text-decoration: none;
@@ -161,7 +160,7 @@ header nav ul li:hover {
 }
 
 header nav ul li a {
-    color: #fff; /* Questo imposta il colore del testo dei bottoni a bianco */
+    color: #fff;
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 20px;
@@ -170,9 +169,8 @@ header nav ul li a {
     display: block;
 }
 
-/* Questa regola assicura che il testo rimanga bianco anche al hover, grazie alla specificità */
 header nav ul li a:hover {
-    color: #fff; /* Forza il colore bianco per il testo al hover */
+    color: #fff;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
