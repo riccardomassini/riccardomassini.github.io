@@ -23,6 +23,7 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
+/* Colore generale dei link - non dovrebbe più influenzare i bottoni di navigazione */
 a {
     color: #007bff;
     text-decoration: none;
@@ -53,22 +54,45 @@ header {
     overflow: hidden;
 }
 
-header::before {
-    content: '';
+.matrix-background {
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.05);
-    transform: rotate(45deg);
-    animation: header-bg-pulse 15s infinite alternate;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
     z-index: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
-@keyframes header-bg-pulse {
-    0% { transform: scale(1) rotate(45deg); opacity: 0.05; }
-    100% { transform: scale(1.1) rotate(48deg); opacity: 0.08; }
+.matrix-background span {
+    position: absolute;
+    font-family: 'monospace';
+    color: #0f0;
+    font-size: 1.1em;
+    opacity: 0;
+    animation: matrixFall linear infinite;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+}
+
+@keyframes matrixFall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+header .container {
+    position: relative;
+    z-index: 1;
 }
 
 header .profile-pic {
@@ -137,7 +161,7 @@ header nav ul li:hover {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #fff; /* Questo imposta il colore del testo dei bottoni a bianco */
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 20px;
@@ -146,7 +170,9 @@ header nav ul li a {
     display: block;
 }
 
+/* Questa regola assicura che il testo rimanga bianco anche al hover, grazie alla specificità */
 header nav ul li a:hover {
+    color: #fff; /* Forza il colore bianco per il testo al hover */
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
@@ -187,7 +213,7 @@ header nav ul li a:hover {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #007bff;
+    color: #008000;
     position: relative;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -198,7 +224,7 @@ header nav ul li a:hover {
     display: block;
     width: 60px;
     height: 3px;
-    background: #007bff;
+    background: #008000;
     margin: 10px auto 0;
     border-radius: 2px;
 }
@@ -214,7 +240,7 @@ header nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    border-left: 4px solid #007bff;
+    border-left: 4px solid #008000;
     position: relative;
     overflow: hidden;
 }
@@ -225,7 +251,7 @@ header nav ul li a:hover {
 }
 
 .job-entry h3, .education-entry h3, .project-entry h3 {
-    color: #0056b3;
+    color: #006400;
     margin-top: 0;
     font-size: 1.8em;
     margin-bottom: 8px;
@@ -273,7 +299,7 @@ header nav ul li a:hover {
 }
 
 .skills-category h3 {
-    color: #007bff;
+    color: #008000;
     margin-bottom: 15px;
     font-size: 1.6em;
     text-align: center;
@@ -285,7 +311,7 @@ header nav ul li a:hover {
     display: block;
     width: 40px;
     height: 2px;
-    background: #007bff;
+    background: #008000;
     margin: 8px auto 0;
     border-radius: 1px;
 }
@@ -298,7 +324,7 @@ header nav ul li a:hover {
 }
 
 .skill-list li {
-    background-color: #007bff;
+    background-color: #008000;
     color: #fff;
     padding: 8px 16px;
     border-radius: 20px;
@@ -309,16 +335,16 @@ header nav ul li a:hover {
 }
 
 .skill-list li:hover {
-    background-color: #0056b3;
+    background-color: #006400;
     transform: scale(1.03);
 }
 
 .skills-category p strong {
-    color: #007bff;
+    color: #008000;
 }
 
 .project-entry {
-    border-left-color: #28a745;
+    border-left-color: #008000;
 }
 
 .project-links a {
