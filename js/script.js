@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('nav a[href="#about"]').classList.add('active-nav');
 
     if (matrixBackground) {
-        const characters = "01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101"; // Puoi variare i caratteri
-        const characterCount = 500;
+        const characters = "01";
+        const characterCount = 280;
 
         for (let i = 0; i < characterCount; i++) {
             const charSpan = document.createElement('span');
