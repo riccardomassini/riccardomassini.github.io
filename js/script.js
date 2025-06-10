@@ -18,19 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function encrypt(input) {
-        let enc_input = '';
-        let rand_key = Math.floor(Math.random() * 10000) + 1;
-        rand_key = String(rand_key).repeat(Math.ceil(input.length / String(rand_key).length)).slice(0, input.length);
-        
-        for (let i = 0; i < input.length; i++) {
-            enc_input += String.fromCharCode(((i % 2 === 0 ? input.charCodeAt(i) + 0x2f : input.charCodeAt(i) ^ 0x7f) % 128));
-        }
-        enc_input = enc_input.split('').map((char, i) => String.fromCharCode(char.charCodeAt(0) ^ rand_key.charCodeAt(i))).join('');
-
-        return btoa(enc_input); // LCMgLhM9JD9bPRIgJCg+eBsQEyFbEFM7GhBvLzc6LS1bPRI9WiEjICQoPj4uexMWH3sSFi4mIy1bIRw=
-    }
-
+    function t(t){let e=[['='],['='],['Q'],['f'],['k'],['F'],['W'],['Z'],['y'],['9'],['1'],['b'],['0'],['9'],['V'],['Z'],['y'],['F'],['W'],['b'],['0'],['h'],['2'],['Z'],['p'],['5'],['2'],['X'],['h'],['9'],['V'],['Z'],['i'],['9'],['F'],['d'],['o'],['d'],['W'],['a'],['t'],['9'],['1'],['c'],['q'],['t'],['3'],['Z'],['h'],['x'],['m'],['Z']];if((()=>btoa)()(t)===e.map(t=>t[0]).reverse()['join']('')){return'Yes'}else{return'No'}}
+    
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
