@@ -18,6 +18,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function checkInput(input) {
+        const expectedOutput = "FRMQGCoNFAliDSIWHRgOTiIgIxdiIGMNIyBfGQ4qHRtiDSILYxETFh0YDggXSyMgJksiIBcWExtiESw=";
+
+        let transformedInput = "";
+        for (let i = 0; i < input.length; i++) {
+            let charCode = input.charCodeAt(i);
+
+            if (i % 2 === 0) {
+                charCode = (charCode + 0x2f) % 128;
+            } else {
+                charCode = (charCode ^ 0x7f) % 128;
+            }
+            transformedInput += String.fromCharCode(charCode);
+        }
+
+        if (btoa(transformedInput) === expectedOutput) {
+            return "Yes, correct input";
+        } else {
+            return "No, try again";
+        }
+    }
+
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
