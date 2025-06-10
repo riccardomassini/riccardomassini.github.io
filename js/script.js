@@ -18,26 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function checkInput(input) {
-        const expectedOutput = "FRMQGCoNFAliDSIWHRgOTiIgIxdiIGMNIyBfGQ4qHRtiDSILYxETFh0YDggXSyMgJksiIBcWExtiESw=";
-
-        let transformedInput = "";
+    function encrypt(input) {
+        let enc_input = '';
+        let rand_key = Math.floor(Math.random() * 10000) + 1;
+        rand_key = String(rand_key).repeat(Math.ceil(input.length / String(rand_key).length)).slice(0, input.length);
+        
         for (let i = 0; i < input.length; i++) {
-            let charCode = input.charCodeAt(i);
-
-            if (i % 2 === 0) {
-                charCode = (charCode + 0x2f) % 128;
-            } else {
-                charCode = (charCode ^ 0x7f) % 128;
-            }
-            transformedInput += String.fromCharCode(charCode);
+            enc_input += String.fromCharCode(((i % 2 === 0 ? input.charCodeAt(i) + 0x2f : input.charCodeAt(i) ^ 0x7f) % 128));
         }
+        enc_input = enc_input.split('').map((char, i) => String.fromCharCode(char.charCodeAt(0) ^ rand_key.charCodeAt(i))).join('');
 
-        if (btoa(transformedInput) === expectedOutput) {
-            return "Yes, correct input";
-        } else {
-            return "No, try again";
-        }
+        return btoa(enc_input); // LCMgLhM9JD9bPRIgJCg+eBsQEyFbEFM7GhBvLzc6LS1bPRI9WiEjICQoPj4uexMWH3sSFi4mIy1bIRw=
     }
 
     navLinks.forEach(anchor => {
@@ -62,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('nav a[href="#about"]').classList.add('active-nav');
 
     if (matrixBackground) {
-        const characters = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホ0123456789";
+        const characters = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホ0123456789';
         const characterCount = 100;
 
         for (let i = 0; i < characterCount; i++) {
