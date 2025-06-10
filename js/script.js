@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('nav a[href="#about"]').classList.add('active-nav');
 
     if (matrixBackground) {
-        const characters = "01";
-        const characterCount = 280;
+        const characters = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホ0123456789";
+        const characterCount = 200;
 
         for (let i = 0; i < characterCount; i++) {
             const charSpan = document.createElement('span');
