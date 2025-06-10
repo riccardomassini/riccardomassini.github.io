@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (matrixBackground) {
         const characters = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホ0123456789";
-        const characterCount = 200;
+        const characterCount = 100;
 
         for (let i = 0; i < characterCount; i++) {
             const charSpan = document.createElement('span');
