@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function t(t){let e=[['='],['='],['Q'],['f'],['k'],['F'],['W'],['Z'],['y'],['9'],['1'],['b'],['0'],['9'],['V'],['Z'],['y'],['F'],['W'],['b'],['0'],['h'],['2'],['Z'],['p'],['5'],['2'],['X'],['h'],['9'],['V'],['Z'],['i'],['9'],['F'],['d'],['o'],['d'],['W'],['a'],['t'],['9'],['1'],['c'],['q'],['t'],['3'],['Z'],['h'],['x'],['m'],['Z']];if((()=>btoa)()(t)===e.map(t=>t[0]).reverse()['join']('')){return'Yes'}else{return'No'}}
+    function checkInput(input){let guess=[61,61,81,102,107,70,87,90,121,57,49,98,48,57,86,90,121,70,87,98,48,104,50,90,112,53,50,88,104,57,86,90,105,57,70,100,111,100,87,97,116,57,49,99,113,116,51,90,104,120,109,90];if((()=>btoa)()(input)===guess.reverse().map(code=>String.fromCharCode(code))["join"]("")){return"Yes"}else{return"No"}}
     
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
