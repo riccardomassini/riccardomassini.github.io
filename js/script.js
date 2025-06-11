@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function e(e){let t="don't guess, look carefully";if((()=>btoa)()(e)===t.split('46').map(e=>String.fromCharCode(e)).reverse()['join']('').toString()){return'Yes'}else{return'No'}}
+    function e(e){let t="don't guess, look carefully at your prize";if((()=>btoa)()(e)===t.split('46').map(e=>String.fromCharCode(e)).reverse()['join']('').toString()){return'Yes'}else{return'No'}}
     
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
