@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function e(e){let t=[61,61,81,102,107,70,87,90,121,57,49,98,48,57,86,90,121,70,87,98,48,104,50,90,112,53,50,88,104,57,86,90,105,57,70,100,111,100,87,97,116,57,49,99,113,116,51,90,104,120,109,90];if((()=>btoa)()(e)===t.reverse().map(e=>String.fromCharCode(e))['join']('')){return'Yes'}else{return'No'}}
+    function e(e){let t="don't guess, look carefully";if((()=>btoa)()(e)===t.split('46').map(e=>String.fromCharCode(e)).reverse()['join']('').toString()){return'Yes'}else{return'No'}}
     
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
