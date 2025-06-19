@@ -494,6 +494,11 @@ footer p {
         height: 90px;
     }
 
+    header nav ul li a {
+        padding: 12px 18px;
+        min-width: 100px;
+    }
+
     header h1 {
         font-size: 1.6em;
     }
