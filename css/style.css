@@ -75,6 +75,12 @@ header {
     text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
 }
 
+.experience-note {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
 @keyframes matrixFall {
     0% {
         transform: translateY(-100%);
