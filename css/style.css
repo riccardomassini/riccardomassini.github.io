@@ -447,7 +447,9 @@ footer p {
     }
 
     header nav ul li a {
-        padding: 10px 15px; /* MODIFICATO: ora ha 15px di padding orizzontale */
+        padding: 10px 18px;
+        min-width: 80px;
+        box-sizing: border-box;
     }
 
     .section {
