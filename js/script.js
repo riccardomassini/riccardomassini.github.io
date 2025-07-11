@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
             eduBachelorTitle: "Laurea in Informatica",
             eduBachelorInstitution: "Università dell'Insubria - Como, Italia",
             eduBachelorDates: "[09/2022 - 07/2025]",
+            eduBachelorGrade: "Voto finale: 110 e lode",
             eduBachelorThesis: "Tesi: Deep Learning in Dermatologia: Analisi Automatica delle Immagini",
             eduHighSchoolTitle: "Diploma di Scuola Superiore in Informatica",
             eduHighSchoolInstitution: "Magistri Cumacini - Como, Italia",
