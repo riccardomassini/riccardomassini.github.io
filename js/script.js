@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             eduBachelorTitle: "Bachelor in Computer Science",
             eduBachelorInstitution: "University of Insubria - Como, Italy",
             eduBachelorDates: "[09/2022 - 07/2025]",
+            eduBachelorGrade: "Final grade: 110 cum laude" ,
             eduBachelorThesis: "Thesis: Deep Learning in Dermatology: Automatic Image Analysis",
             eduHighSchoolTitle: "High School Diploma in Information Technology",
             eduHighSchoolInstitution: "Magistri Cumacini - Como, Italy",
